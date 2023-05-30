@@ -1,3 +1,40 @@
+class Empleado:
+
+    __codigo : str
+    cedula : str
+    nombre : str
+    correo : str
+
+    def __init__(self,p1,p2,p3,p4):
+        Empleado.__codigo =p1
+        Empleado.cedula = p2
+        Empleado.nombre = p3
+        Empleado.correo = p4
+
+    def setCodigo(self,codigo):
+        Empleado.__codigo= codigo
+
+    def getCodigo(self):
+        return Empleado.__codigo
+
+
+    def getData(self):
+        return Empleado.__codigo+" "+Empleado.cedula+" "+Empleado.nombre+" "+ Empleado.correo
+"""
+obj = Empleado("EMP001","095857","CARLOS LINO","jose@gmail.com")
+obj.setCodigo("COD002")
+obj.cedula="0986665"
+print(obj.getData())
+"""
+
+
+
+
+
+
+
+
+
 class Metodos:
 
     def imprimir(self,nombre):
