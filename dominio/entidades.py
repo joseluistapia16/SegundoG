@@ -74,6 +74,9 @@ class Persona:
     def getCedula(self):
         return self.__cedula
 
+    def getFields(self):
+        return None
+
     def getData(self):
         return self.__cedula+" "+self.nombre+" "+self.direccion
 
@@ -86,6 +89,10 @@ class Proveedor(Persona):
     def getData(self):
         return self.getCedula()+" "+self.nombre+" "+self.direccion+" "+self.cod_prov
 
+    def getFields(self):
+        return "Cedula:"+self.getCedula()+\
+            "\nNombre:"+self.nombre+"\nDireccion:"+\
+            self.direccion+"\nCodigo:"+self.cod_prov
 class Cliente(Persona,Metodos):
 
     def __init__(self,cedula, nombre,direccion,codigo):
